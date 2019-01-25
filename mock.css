@@ -1,0 +1,111 @@
+@media all{
+	/*
+	*  Rule
+	*  - Style create component base. (Execept #main-contents and #wrapper)
+	*  - Default, Does'nt set id that only style.
+	*/
+
+
+	/*
+	*  Wrapper
+	*/
+
+	/* --------------  header layout  -------------- */
+	header {
+		/*--- position style ---*/
+		position: fixed;
+		top:0;
+		width: calc(100% - 32px);
+		z-index: 9999;
+		transform: translateY(0);
+		transition: transform 0.3s ease;
+		height: 56px;
+		padding:0px 16px;
+		background-color: #fff;
+		border-bottom: solid 1px #eee;
+
+		/*--- wrapper style ---*/
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header > . {
+		align-self: center;
+	}
+
+	header > form{
+		flex-grow: 2;
+		text-align: center;
+	}
+
+	/* --------------  default main area layout  -------------- */
+	#wrapper {
+		position: relative;
+		top: 57px;
+		margin-right: 80px;
+
+	}
+
+	/* --------------  default navigation bar layout  -------------- */
+	nav {
+		position: fixed;
+		top: 57px;
+		right: 0;
+		width: 60px;
+		height: calc(100% - 57px);
+		padding: 10px;
+		background-color: #eee;
+	}
+
+	/* --------------  default contents wrapper layout  -------------- */
+	#main-contents {
+	}
+
+	/* --------------  contents section layout  -------------- */	
+	section {
+		padding-bottom: 15px;
+		margin: 24px 16px 0px 16px;
+		border-bottom: solid 1px #eee;
+	}
+
+	section > h1 {
+	}
+
+	/* --------------  svc-box wrapper section layout  -------------- */	
+	section > div {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		margin-top: 12px;
+	}
+
+
+	/*
+	*  Componet
+	*/
+
+	/* --------------  svc-box used by provied item box layout  -------------- */
+	.svc-box {
+		/*--- box wrapper's style ---*/
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		/*--- child's style ---*/
+		flex-basis: 220px;
+		background-color: #fff
+	}
+
+	.svc-box > div {
+		flex-basis: auto;
+		min-width: 200px;
+		height: 200px;
+		border: solid 1px;
+	}
+
+	.svc-box > div > a {
+		display: 
+	}
+}
