@@ -35,10 +35,43 @@
 		align-self: center;
 	}
 
-	header > form{
-		flex-grow: 2;
-		text-align: center;
-	}
+	/*--- seach box style ---*/
+		header > form {
+			/*--- wrapper style ---*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			/*--- child's style ---*/
+			flex-grow: 2;
+		}
+
+		header > form input[type = text] {
+			width: 578px;
+			height: 32px;
+			padding: 2px 6px;
+		}
+
+		header > form input[type = button] {
+			height: 40px;
+			padding: 0px 6px;
+		}
+
+	/*--- user icon style ---*/
+		header > span {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			border: solid 1px #eee;
+		}
+
+		header > span > a {
+			display: inline-block;
+			width: 100%;
+			line-height: 32px;
+			text-align: center;
+			border-radius: 50%;
+		}
 
 	/* --------------  default main area layout  -------------- */
 	#wrapper {
