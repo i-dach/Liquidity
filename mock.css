@@ -49,12 +49,20 @@
 		header > form input[type = text] {
 			width: 578px;
 			height: 32px;
-			padding: 2px 6px;
+			padding: 2px 6px 2px 12px;
+			background-color: #fafafa;
+			border: solid 1px #a2a2a2;
+			border-radius: 4px 0px 0px 4px;
 		}
 
 		header > form input[type = button] {
-			height: 40px;
+			color: #fff;
+			height: 38px;
 			padding: 0px 6px;
+			margin-left: -1px;
+			background-color: #a2a2a2;
+			border: solid 1px #a2a2a2;
+			border-radius: 0px 4px 4px 0px;
 		}
 
 	/*--- user icon style ---*/
@@ -76,9 +84,9 @@
 	/* --------------  default main area layout  -------------- */
 	#wrapper {
 		position: relative;
-		top: 57px;
+		padding-top: 57px;
 		margin-right: 80px;
-
+		background-color: #eee;
 	}
 
 	/* --------------  default navigation bar layout  -------------- */
@@ -89,11 +97,11 @@
 		width: 60px;
 		height: calc(100% - 57px);
 		padding: 10px;
-		background-color: #eee;
 	}
 
 	/* --------------  default contents wrapper layout  -------------- */
 	#main-contents {
+
 	}
 
 	/* --------------  contents section layout  -------------- */	
@@ -104,13 +112,50 @@
 	}
 
 	section > h1 {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.4em;
+		font-weight: bold;
+	}
+
+	section > h1 > span {
+		height: 1em;
+	}
+
+	section > h1 > span > a{
+		position: relative;
+		display: inline-block;
+		color: transparent;
+	}
+
+	section > h1 > span > a:before{
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: 0;
+		width: 1.2rem;
+		height: 2px;
+		background-color: #b2b2b2;
+		transform: rotate(45deg) translate(-5%,-50%);
+	}
+
+	section > h1 > span > a:after{
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50%;
+		right: 0;
+		width: 1.2rem;
+		height: 2px;
+		background-color: #b2b2b2;
+		transform: rotate(-45deg) translate(5%,-50%);
 	}
 
 	/* --------------  svc-box wrapper section layout  -------------- */	
 	section > div {
 		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-around;
+		flex-wrap: wrap;
 		margin-top: 12px;
 	}
 
@@ -125,20 +170,71 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		align-content: center;
+		margin-bottom: 3px;
 
 		/*--- child's style ---*/
-		flex-basis: 220px;
-		background-color: #fff
+		position: relative;
+		flex-basis: 260px;
+		background-color: #fff;
+	}
+
+	.svc-box:nth-child(n + 1) {
+		margin-left: 3px;
+	}
+
+	.svc-box:first-child {
+		margin-left: 0px;
+	}
+
+	.svc-box:nth-child(5n + 1) {
+		margin-left: 0px;
 	}
 
 	.svc-box > div {
 		flex-basis: auto;
-		min-width: 200px;
+		width: 100%;
+		min-width: 260px;
 		height: 200px;
-		border: solid 1px;
 	}
 
-	.svc-box > div > a {
-		display: 
+	.svc-box > div > img {
+		position: relative;
+		display: block;
+		top: 50%;
+		width: 100%;
+		max-height: 100%;
+		transform: translateY(-50%);
 	}
+	
+	.svc-box > dl {
+		width: calc(100% - 16px);
+		padding: 10px 0px;
+	}
+
+	.svc-box > dl > dt{
+		padding-bottom: 4px;
+	}
+
+	.svc-box > dl > dt > span{
+		float: right;
+		color: #BBB;
+		font-size: 0.8rem;
+	}
+
+	.svc-box > dl > dd{
+		font-size: 1.4rem;
+	}
+
+	.svc-box > a {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		transform: translate(0,0);
+		width: 100%;
+		height: 100%;
+		text-indent: -9999px;
+	}
+
 }
