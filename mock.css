@@ -235,6 +235,11 @@
 		width: 100%;
 		height: 100%;
 		text-indent: -9999px;
+		z-index: 100;
 	}
 
+	.svc-box > a:hover {
+		opacity: 0.4;
+		background-color: #eee;
+	}
 }
