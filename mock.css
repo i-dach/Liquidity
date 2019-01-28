@@ -392,4 +392,31 @@
 		}
 
 
+	/* --------------  review layout  -------------- */	
+	.reviews dl {
+		display: flex;
+		flex-direction: column;
+		margin: 8px 0px;
+	}
+
+		.reviews dl > dt {
+			font-weight: bold;
+			padding-bottom: 4px;
+			border-bottom: dashed 1px #b2b2b2;
+		}
+
+		.reviews dl > dt > .star {
+			float: right;
+		}
+
+		.reviews dl > dd {
+			clear: both;
+			line-height: 1.4em;
+			padding-top: 4px;
+		}
+
+		.reviews dl > dd a{
+			float: right;
+			color: #a2a2a2;
+		}
 }
